@@ -38,7 +38,12 @@ const App = () => {
     }
 
     return (
-        <div className={(typeof weather.main!="undefined") ? ((weather.main.temp > 16) ? 'app warm':'app'):'app'}>
+        <div className={(typeof weather.main!="undefined") ? 
+        ((weather.weather[0].main === 'Haze') ? 'haze':(weather.weather[0].main==='Clouds') ? 'clouds':(weather.weather[0].main ==='Rain')? 'rain':(weather.weather[0].main === 'Thunderstorm')?'thunderstorm':(weather.weather[0].main === 'Clear')?'clear':(weather.weather[0].main === 'Mist')?'mist':(weather.weather[0].main === 'Smoke')? 'smoke':'')
+        
+        
+        :'app'}>
+
             <main>
                 <div className="search-box">
                     <input
@@ -61,6 +66,9 @@ const App = () => {
                 <div className="weather-box">
                 <div className="temp">{Math.round(weather.main.temp)}&#176;C</div>
                     <div className="weather">
+                        <div id="feels-like"> Feels like &nbsp;
+                        {Math.round(weather.main.feels_like)}&#176;
+                        </div>
                         {weather.weather[0].main}
                     </div>
                 </div>

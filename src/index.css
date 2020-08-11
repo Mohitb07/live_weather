@@ -84,6 +84,7 @@ main {
   margin: 30px auto;
   background-color: rgba(255,255,255,0.2);
   border-radius: 16px;
+  transition: 0.5s ease-out;
 
   padding: 15px 25px;
 
@@ -102,6 +103,60 @@ main {
   font-weight: 700;
   text-shadow: 3px 3px rgba(50,50,70,0.5);
 }
+
+#feels-like {
+  font-size: 50%;
+  margin-bottom: 2rem;
+}
+
+.haze  {
+  background-image: url('./assests/haze.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out;
+}
+
+.clouds {
+  background-image: url('./assests/cloudy.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out;  
+}
+
+.thunderstorm {
+  background-image: url('./assests/thunderstorm.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out;  
+}
+
+.rain {
+  background-image: url('./assests/rain.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out;  
+}
+
+.clear {
+  background-image: url('./assests/summer1.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out;
+}
+.mist {
+  background-image: url('./assests/mist.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out; 
+}
+
+.smoke {
+  background-image: url('./assests/smoke.jpg');
+  background-size: cover;
+  background-position:center;
+  transition: 0.4s ease-out; 
+}
+
 
 @media only screen and (min-width: 992px){
   .app {
@@ -150,6 +205,55 @@ main {
     font-size: 20px;
   
     transition: 0.4s ease;
+    
   }
 
+  .haze  {
+    background-image: url('./assests/haze.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out;
+  }
+
+  .clouds {
+    background-image: url('./assests/cloudy.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out;  
+  }
+
+  .thunderstorm {
+    background-image: url('./assests/thunderstorm.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out;  
+  }
+
+  .rain {
+    background-image: url('./assests/rain.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out;  
+  }
+
+  .clear {
+    background-image: url('./assests/summer1.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out;
+  }
+  .mist {
+    background-image: url('./assests/mist.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out; 
+  }
+
+  .smoke {
+    background-image: url('./assests/smoke.jpg');
+    background-size: cover;
+    background-position:center;
+    transition: 0.4s ease-out; 
+  }
+  
  }
