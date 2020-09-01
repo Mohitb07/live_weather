@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import index from './index.css'
 
 
@@ -6,10 +6,16 @@ const api = {
     key : 'b267e1938cf3553846b90e9d9090a5ed',
     base: 'https://api.openweathermap.org/data/2.5/'
 }
+
 const App = () => {
+
 
     const [query, setQuery] = useState('');
     const [weather, setWeather]= useState({});
+    const [dailyDataMax, setDailyDataMax] = useState([]);
+    const [dailyDataMin, setDailyDataMin] = useState([]);
+    
+    
 
     const search = evt => {
         if (evt.key === "Enter"){
@@ -19,6 +25,18 @@ const App = () => {
                 setWeather(data);
                 setQuery('');
                 console.log(data)
+                
+                if (data.cod!=404){               
+                    fetch(`${api.base}onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&
+                    exclude=daily,&appid=${api.key}`)          
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    setDailyDataMax(data.daily[1].temp.max - 273.15);
+                    setDailyDataMin(data.daily[1].temp.min - 273.15);
+                    console.log(data.daily[1].temp.max - 273.15)
+                })
+            }
             })
         }
     }
@@ -70,6 +88,8 @@ const App = () => {
                         {Math.round(weather.main.feels_like)}&#176;
                         </div>
                         {weather.weather[0].main}
+                        <h6>Tomorrow</h6>
+                <p>Max {Math.floor(dailyDataMax)}&#176;  / Min {Math.floor(dailyDataMin)}&#176;</p>                     
                     </div>
                 </div>
                 </div>
