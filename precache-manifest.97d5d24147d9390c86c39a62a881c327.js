@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "feff6fef10a58922cca33777114f8f38",
+    "revision": "44c129f9383b05840fbcd283734c9c38",
     "url": "/live_weather/index.html"
   },
   {
-    "revision": "1bc5dd5cc4563ab5bb13",
-    "url": "/live_weather/static/css/main.8035996f.chunk.css"
+    "revision": "a7b547b0c04dfca9a387",
+    "url": "/live_weather/static/css/main.1270576a.chunk.css"
   },
   {
     "revision": "7cf2182656a62ed6117a",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/live_weather/static/js/2.d437b892.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1bc5dd5cc4563ab5bb13",
-    "url": "/live_weather/static/js/main.9d61d44f.chunk.js"
+    "revision": "a7b547b0c04dfca9a387",
+    "url": "/live_weather/static/js/main.b44535de.chunk.js"
   },
   {
     "revision": "489ede6083b63aa7e746",
