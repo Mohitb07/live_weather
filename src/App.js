@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState } from 'react';
 import index from './index.css'
 
 
@@ -14,7 +14,7 @@ const App = () => {
     const [weather, setWeather]= useState({});
     const [dailyDataMax, setDailyDataMax] = useState([]);
     const [dailyDataMin, setDailyDataMin] = useState([]);
-    
+    const [dailyDataWeather, setDailyDataWeather] = useState([]);
     
 
     const search = evt => {
@@ -35,6 +35,8 @@ const App = () => {
                     setDailyDataMax(data.daily[1].temp.max - 273.15);
                     setDailyDataMin(data.daily[1].temp.min - 273.15);
                     console.log(data.daily[1].temp.max - 273.15)
+                        console.log(data.daily[1].weather[0].description)
+                        setDailyDataWeather(data.daily[1].weather[0].description);
                 })
             }
             })
@@ -89,7 +91,9 @@ const App = () => {
                         </div>
                         {weather.weather[0].main}
                         <h6>Tomorrow</h6>
-                <p>Max {Math.floor(dailyDataMax)}&#176;  / Min {Math.floor(dailyDataMin)}&#176;</p>                     
+                        <p>{dailyDataWeather}</p>
+                        <p>Max {Math.floor(dailyDataMax)}&#176;  / Min {Math.floor(dailyDataMin)}&#176;</p>
+
                     </div>
                 </div>
                 </div>
