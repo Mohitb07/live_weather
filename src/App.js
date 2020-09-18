@@ -65,6 +65,9 @@ const App = () => {
         :'app'}>
 
             <main>
+                <div className="text">
+                    <p>Live Weather</p>
+                </div>
                 <div className="search-box">
                     <input
                         type="text"

@@ -168,6 +168,33 @@ main {
   margin: 2rem 0;
 }
 
+.text {
+  position: absolute;
+  top: 50px;
+  left: 50rem;
+  font-size: 340%;
+  margin-bottom: 7rem;
+  color: white;
+}
+
+.text p {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 320px;}
+}
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255, 255, 255, 0.986);}
+  to{border-right-color: transparent;}
+}
+
 @media only screen and (min-width: 992px){
   .app {
     background-image: url(./assests/winter.jpg);
