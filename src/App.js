@@ -24,19 +24,15 @@ const App = () => {
             .then(data => {
                 setWeather(data);
                 setQuery('');
-                console.log(data)
                 
                 if (data.cod!=404){               
                     fetch(`${api.base}onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&
                     exclude=daily,&appid=${api.key}`)          
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
                     setDailyDataMax(data.daily[1].temp.max - 273.15);
                     setDailyDataMin(data.daily[1].temp.min - 273.15);
-                    console.log(data.daily[1].temp.max - 273.15)
-                        console.log(data.daily[1].weather[0].description)
-                        setDailyDataWeather(data.daily[1].weather[0].description);
+                    setDailyDataWeather(data.daily[1].weather[0].description);
                 })
             }
             })
