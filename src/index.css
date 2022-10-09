@@ -9,14 +9,14 @@ body {
 }
 
 .app {
-  background-image: url(./assests/cold-bg.jpg);
+  background-image: url(./assets/cold-bg.jpg);
   background-size: cover;
   background-position:bottom ;
   transition: 0.4s ease-out;
 }
 
 .app.warm {
-  background-image: url('./assests/warm-bg.jpg');
+  background-image: url('./assets/warm-bg.jpg');
 }
 
 main {
@@ -78,7 +78,7 @@ main {
   text-align: center;
 }
 
-.weather-box .temp {
+.weather-box .temp, .error {
   position: relative;
   display: inline-block;
   margin: 30px auto;
@@ -97,6 +97,10 @@ main {
   box-shadow: 3px 6px rgba(50,50,70,0.2);
 }
 
+.error {
+  font-size: 3rem;
+}
+
 .weather-box .weather {
   color: #fff;
   font-size: 48px;
@@ -110,48 +114,48 @@ main {
 }
 
 .haze  {
-  background-image: url('./assests/haze.jpg');
+  background-image: url('./assets/haze.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out;
 }
 
 .clouds {
-  background-image: url('./assests/cloudy.jpg');
+  background-image: url('./assets/cloudy.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out;  
 }
 
 .thunderstorm {
-  background-image: url('./assests/thunderstorm.jpg');
+  background-image: url('./assets/thunderstorm.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out;  
 }
 
 .rain {
-  background-image: url('./assests/rain.jpg');
+  background-image: url('./assets/rain.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out;  
 }
 
 .clear {
-  background-image: url('./assests/summer1.jpg');
+  background-image: url('./assets/summer1.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out;
 }
 .mist {
-  background-image: url('./assests/mist.jpg');
+  background-image: url('./assets/mist.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out; 
 }
 
 .smoke {
-  background-image: url('./assests/smoke.jpg');
+  background-image: url('./assets/smoke.jpg');
   background-size: cover;
   background-position:center;
   transition: 0.4s ease-out; 
@@ -171,14 +175,14 @@ main {
 
 @media only screen and (min-width: 992px){
   .app {
-    background-image: url(./assests/winter.jpg);
+    background-image: url(./assets/winter.jpg);
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out;
     height: 100vh;
   }
   .app.warm {
-    background-image: url('./assests/summer1.jpg');
+    background-image: url('./assets/summer1.jpg');
     background-size: cover;
     background-position: center center;
     height: 100%;
@@ -220,48 +224,48 @@ main {
   }
 
   .haze  {
-    background-image: url('./assests/haze.jpg');
+    background-image: url('./assets/haze.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out;
   }
 
   .clouds {
-    background-image: url('./assests/cloudy.jpg');
+    background-image: url('./assets/cloudy.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out;  
   }
 
   .thunderstorm {
-    background-image: url('./assests/thunderstorm.jpg');
+    background-image: url('./assets/thunderstorm.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out;  
   }
 
   .rain {
-    background-image: url('./assests/rain.jpg');
+    background-image: url('./assets/rain.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out;  
   }
 
   .clear {
-    background-image: url('./assests/summer1.jpg');
+    background-image: url('./assets/summer1.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out;
   }
   .mist {
-    background-image: url('./assests/mist.jpg');
+    background-image: url('./assets/mist.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out; 
   }
 
   .smoke {
-    background-image: url('./assests/smoke.jpg');
+    background-image: url('./assets/smoke.jpg');
     background-size: cover;
     background-position:center;
     transition: 0.4s ease-out; 
